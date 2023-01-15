@@ -37,7 +37,6 @@ public class _01_StreamWordCount {
          */
         env.setParallelism(1);  // 默认并行度可以通过env人为指定
 
-
         // 通过source算子，把socket数据源加载为一个dataStream（数据流）
         // [root@doit01 ~]# nc -lk 9999
         SingleOutputStreamOperator<String> source = env.socketTextStream("localhost", 9999)

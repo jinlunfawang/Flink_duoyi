@@ -174,7 +174,7 @@ public class _07_Transformation_Demos {
 }
 
 @Data
-class UserInfo implements Serializable {
+  class UserInfo implements Serializable {
     private int uid;
     private String name;
     private String gender;
