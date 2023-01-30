@@ -31,8 +31,8 @@ public class _13_SideOutput_Demo {
 
 
         // 开启checkpoint
-        env.enableCheckpointing(5000, CheckpointingMode.EXACTLY_ONCE);
-        env.getCheckpointConfig().setCheckpointStorage("file:///d:/ckpt");
+       // env.enableCheckpointing(5000, CheckpointingMode.EXACTLY_ONCE);
+       // env.getCheckpointConfig().setCheckpointStorage("file:///d:/ckpt");
 
         // 构造好一个数据流
         DataStreamSource<EventLog> streamSource = env.addSource(new MySourceFunction());
@@ -73,11 +73,9 @@ public class _13_SideOutput_Demo {
 
         // 获取back 测流数据
         DataStream<String> backStream = processed.getSideOutput(new OutputTag<String>("back",TypeInformation.of(String.class)));
-
         launchStream.print("launch");
-
         backStream.print("back");
-
+      //  processed.print("11");
 
         env.execute();
 

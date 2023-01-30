@@ -20,17 +20,17 @@ import org.apache.flink.util.Collector;
 public class WorldCount {
     public static void main(String[] args) throws Exception {
         // 流批一体的执行环境
-        //  StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
+         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         // 开启web-ui
-        Configuration conf = new Configuration();
-        conf.setInteger("rest.port", 9999);
+//        Configuration conf = new Configuration();
+//        conf.setInteger("rest.port", 9999);
         // 开启本地WEB_UI
-        StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(conf);
-        env.setParallelism(1);
+     //   StreamExecutionEnvironment env = StreamExecutionEnvironment.createLocalEnvironmentWithWebUI(conf);
+      //  env.setParallelism(1);
         //env.setRuntimeMode(RuntimeExecutionMode.BATCH);
-        String filePath = "./flink_course/data/wc/input/";
-        DataStreamSource<String> socketTextStream = env.readFile(new TextInputFormat(null),filePath, FileProcessingMode.PROCESS_CONTINUOUSLY,1000);
-        // DataStreamSource<String> socketTextStream = env.socketTextStream("localhost", 7777);
+        //  String filePath = "./flink_course/data/wc/input/";
+        // DataStreamSource<String> socketTextStream = env.readFile(new TextInputFormat(null),filePath, FileProcessingMode.PROCESS_CONTINUOUSLY,1000);
+         DataStreamSource<String> socketTextStream = env.socketTextStream("1.117.169.69", 7777);
         SingleOutputStreamOperator<Tuple2<String, Integer>> resultStream = socketTextStream.flatMap(new FlatMapFunction<String, Tuple2<String, Integer>>() {
             @Override
             public void flatMap(String words, Collector<Tuple2<String, Integer>> collector) throws Exception {

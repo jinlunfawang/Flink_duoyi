@@ -71,7 +71,7 @@ class MySourceFunction implements SourceFunction<EventLog>{
 
             eventInfoMap.clear();
 
-            Thread.sleep(RandomUtils.nextInt(200,1500));
+            Thread.sleep(RandomUtils.nextInt(20,150));
         }
     }
 

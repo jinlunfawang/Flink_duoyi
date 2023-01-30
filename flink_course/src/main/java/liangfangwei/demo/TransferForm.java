@@ -13,6 +13,7 @@ import redis.clients.jedis.Tuple;
 
 /**
  * 求不同性别中好友列表中好友最多的人
+ * maxBy 大于等于才完全替换整个状态值
  */
 public class TransferForm {
     public static void main(String[] args) throws Exception {

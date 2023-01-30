@@ -4,5 +4,6 @@
 {"uid":4,"gender":"female","name":"ud","friends":[{"fid":3,"name":"bb"}]}
 {"uid":5,"gender":"male","name":"ue","friends":[{"fid":1,"name":"cc"},{"fid":3,"name":"bb"}]}
 {"uid":6,"gender":"male","name":"uf","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"}]}
-{"uid":7,"gender":"male","name":"uf","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"},{"fid":4,"name":"dd"}]}
-{"uid":8,"gender":"male","name":"xx","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"},{"fid":4,"name":"dd"}]}
+{"uid":7,"gender":"male","name":"uf","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"}]}
+{"uid":8,"gender":"male","name":"xx1","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"},{"fid":4,"name":"dd"}]}
+{"uid":9,"gender":"female","name":"xx2","friends":[{"fid":2,"name":"aa"},{"fid":3,"name":"bb"},{"fid":1,"name":"cc"},{"fid":4,"name":"dd"}]}
